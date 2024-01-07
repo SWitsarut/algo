@@ -62,15 +62,15 @@ void mergeSort(int *arr, int l, int r)
   merge(arr, l, m, r);
 }
 
-int main()
-{
-  int arr[5] = {4, 2, 1, 3, 7};
-  int size = sizeof(arr) / sizeof(int);
-  mergeSort(arr, 0, size - 1);
-  for (int i = 0; i < size; i++)
-  {
-    cout << arr[i] << " ";
-  }
-  cout << endl;
-  return 0;
-}
+// int main()
+// {
+//   int arr[5] = {4, 2, 1, 3, 7};
+//   int size = sizeof(arr) / sizeof(int);
+//   mergeSort(arr, 0, size - 1);
+//   for (int i = 0; i < size; i++)
+//   {
+//     cout << arr[i] << " ";
+//   }
+//   cout << endl;
+//   return 0;
+// }
