@@ -1,18 +1,18 @@
 #include <iostream>
 using namespace std;
 
-class MaxHeap
+class MinHeap
 {
 public:
   int tail = -1;
   int *arr = nullptr;
 
-  MaxHeap(int size)
+  MinHeap(int size)
   {
     this->arr = new int[size];
     this->tail = -1;
   }
-  ~MaxHeap() { delete arr; }
+  ~MinHeap() { delete arr; }
 
   void insert(int num)
   {

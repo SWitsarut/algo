@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-class MaxHeap {
+class MinHeap {
 public:
   int tail = -1;
   int *arr = nullptr;
 
-  MaxHeap(int size) {
+  MinHeap(int size) {
     this->arr = new int[size];
     this->tail = -1;
   }
-  ~MaxHeap() { delete arr; }
+  ~MinHeap() { delete arr; }
 
   void insert(int num) {
     arr[++tail] = num;
@@ -62,7 +62,7 @@ public:
 int main(int argc, char *argv[]) {
   int n = 0;
   cin >> n;
-  MaxHeap *heap = new MaxHeap(n);
+  MinHeap *heap = new MinHeap(n);
   for (int i = 0; i < n; i++) {
     int num = 0;
     cin >> num;

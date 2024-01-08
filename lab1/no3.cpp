@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void getInput(int *arr, int n) {
-  for (int i = 0; i < n; i++) {
-    cin >> arr[i];
-  }
-}
+// void getInput(int *arr, int n) {
+//   for (int i = 0; i < n; i++) {
+//     cin >> arr[i];
+//   }
+// }
 
 int inRange(int start, int targetTime, int end) {
   return targetTime >= start && targetTime <= end ? 1 : 0;
