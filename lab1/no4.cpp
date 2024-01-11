@@ -30,8 +30,13 @@ int main()
   {
     cin >> arr[i];
   }
-  cout << isSorted(arr, 4);
-  cout << isSortedRevered(arr, 4,3);
+  if (isSorted(arr, 4)){
+    cout<<"Yes"<<endl;
+  }
+  else{
+    cout<<"No"<<endl;
+  }
+
   delete[] arr;
   return 0;
 }
