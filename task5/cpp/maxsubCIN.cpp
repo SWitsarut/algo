@@ -8,7 +8,7 @@ int max_subarray_sum(int *arr, int n)
     return arr[0];
   }
   else
-  {
+  { 
     int m = n / 2;
     int lmss = max_subarray_sum(arr, m);
     int rmss = max_subarray_sum(arr + m, n - m);
@@ -16,7 +16,7 @@ int max_subarray_sum(int *arr, int n)
     int lsum = INT32_MIN, rsum = INT32_MIN, sum = 0;
     for (int i = m; i < n; i++)
     {
-      sum += arr[i];
+      sum+= arr[i];
       rsum = max(rsum, sum);
     }
     sum = 0;
