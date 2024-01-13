@@ -1,11 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// void getInput(int *arr, int n) {
-//   for (int i = 0; i < n; i++) {
-//     cin >> arr[i];
-//   }
-// }
 
 int inRange(int start, int targetTime, int end) {
   return targetTime >= start && targetTime <= end ? 1 : 0;
@@ -13,10 +8,16 @@ int inRange(int start, int targetTime, int end) {
 
 int main() {
   int n = 5;
-  // cin>>n;
-  int *arr = new int[n]{1, 2, 10, 12, 5};
-  int *brr = new int[n]{10, 10, 12, 18, 10};
+  cin>>n;
+  int *arr = new int[n];
+  int *brr = new int[n];
+  for(int i =0;i<n;i++){
+    cin>>arr[i];
+  }
 
+  for(int i =0;i<n;i++){
+    cin>>brr[i];
+  }
   int minTime = arr[0], maxTime = brr[0];
   for (int i = 0; i < n; i++) {
     if (arr[i] < minTime) {
