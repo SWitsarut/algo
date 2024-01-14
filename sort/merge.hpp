@@ -7,10 +7,8 @@ void merge(int arr[], int const left, int const mid,
   int const Lstart = mid - left + 1;
   int const Rstart = right - mid;
 
-  // Create temp arrays
   int *lArr = new int[Lstart], *rArr = new int[Rstart];
 
-  // Copy data to temp arrays leftArray[] and rightArray[]
   for (int i = 0; i < Lstart; i++)
     lArr[i] = arr[left + i];
   for (int j = 0; j < Rstart; j++)
@@ -19,7 +17,6 @@ void merge(int arr[], int const left, int const mid,
   int idxLarr = 0, idxRarr = 0;
   int k = left;
 
-  // Merge the temp arrays back into array[left..right]
   while (idxLarr < Lstart && idxRarr < Rstart)
   {
     if (lArr[idxLarr] <= rArr[idxRarr])

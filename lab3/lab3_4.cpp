@@ -6,7 +6,7 @@ int maxSum(int *arr,int n){
     return arr[0];
   }else{
     int m = n/2;
-    int L = maxSum()
+    int L = maxSum(arr,m);
   }
 
 }
