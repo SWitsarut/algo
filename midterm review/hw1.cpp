@@ -29,6 +29,10 @@ int partition(int l, int r)
   {
     swap(arr[l], arr[mot]);
   }
+  if (arr[mot] > arr[r])
+  {
+    swap(arr[mot], arr[r]);
+  }
   int pivotVal = arr[mot];
   cout << "pivot idx :" << mot << " pivot val" << pivotVal << endl;
   cout << count << "ori";
@@ -78,6 +82,7 @@ int main()
 
 // T(1) = 1;
 // T(n) = T(n/2) + n
+//
 // T(n/2) = T(n/4) + n/2 +n
 // T(n/4) = T(n/8) + n/4 + n/2 +n
 // T(n) = T(n/2k) + n* r^n -1 / r - 1
