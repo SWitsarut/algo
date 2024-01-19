@@ -27,10 +27,10 @@ func Mul(aStr string, bStr string) int {
 }
 
 func Main() {
-	// a := 4568
-	// b := 3275
-	a := "1200"
-	b := "0100"
+	a := "4568"
+	b := "3275"
+	// a := "0100"
+	// b := "0100"
 	aInt, _ := strconv.Atoi(a)
 	bInt, _ := strconv.Atoi(b)
 
