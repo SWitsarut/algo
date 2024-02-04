@@ -30,8 +30,6 @@ func perm(arr []int, k int) {
 	}
 }
 
-
-
 func main() {
 	fmt.Println("Start")
 	var size = 5

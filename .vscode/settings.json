@@ -1,8 +1,13 @@
 {
   "files.associations": {
+    "*.ejs": "html",
     "new": "cpp",
     "iostream": "cpp",
     "sstream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "algorithm": "cpp",
+    "initializer_list": "cpp",
+    "valarray": "cpp",
+    "climits": "cpp"
   }
 }
