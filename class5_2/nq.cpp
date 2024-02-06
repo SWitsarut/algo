@@ -3,12 +3,11 @@ using namespace std;
 
 int n = 4, x[4];
 int count = 0;
-
 bool btIsSafe(int row, int col)
 {
   for (int i = 0; i < col; i++)
   {
-    if (abs(row - i) == abs(x[i] - x[row]) || x[row] == x[i])
+    if (abs(i - col) == abs(x[i] - row) || x[i] == row)
     {
       return false;
     }
@@ -18,7 +17,6 @@ bool btIsSafe(int row, int col)
 
 bool isSafe()
 {
-
   for (int i = 0; i < n - 1; i++)
   {
     for (int j = i + 1; j < n; j++)
@@ -37,21 +35,18 @@ void n_queen(int col)
   if (col == n)
   {
     count++;
-    // if (isSafe())
-    // {
     for (int i = 0; i < col; i++)
     {
       cout << x[i];
     }
     cout << endl;
-    // }
   }
   else
   {
     for (int row = 0; row < n; row++)
     {
       x[col] = row;
-      if (isSafe(row, col))
+      if (btIsSafe(row, col))
       {
         n_queen(col + 1);
       }

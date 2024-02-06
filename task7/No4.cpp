@@ -5,6 +5,7 @@ void subset(bool *bin, int *arr, int n, int k, int *count)
 {
   if (k < 0)
   {
+    cout << " ";
     for (int i = 0; i < n; i++)
     {
       if (bin[i])
@@ -16,7 +17,7 @@ void subset(bool *bin, int *arr, int n, int k, int *count)
         cout << "0";
       }
     }
-    cout << "\t";
+    cout << "\t󰅩 ";
     bool isZero = true;
     for (int i = 0; i < n; i++)
     {
