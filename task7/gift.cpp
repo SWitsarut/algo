@@ -1,44 +1,33 @@
 #include <bits/stdc++.h>
+
 #include <climits>
 using namespace std;
 
-bool isCheck(bool *bin, int n)
-{
-  for (int i = 0; i < n; i += 2)
-  {
-    if (bin[i] == bin[i + 1])
-    {
+bool isCheck(bool *bin, int n) {
+  for (int i = 0; i < n; i += 2) {
+    if (bin[i] == bin[i + 1]) {
       return false;
     }
   }
   return true;
 }
 
-int subset(bool *bin, int *arr, int k, int n)
-{
-  if (k == n)
-  {
-    if (isCheck(bin, n))
-    {
+int subset(bool *bin, int *arr, int k, int n) {
+  if (k == n) {
+    if (isCheck(bin, n)) {
       int bigBroSum = 0;
       int lilBroSum = 0;
-      for (int i = 0; i < n; i++)
-      {
-        if (bin[i])
-        {
+      for (int i = 0; i < n; i++) {
+        if (bin[i]) {
           bigBroSum += arr[i];
-        }
-        else
-        {
+        } else {
           lilBroSum += arr[i];
         }
       }
       return abs(bigBroSum - lilBroSum);
     }
     return INT_MAX;
-  }
-  else
-  {
+  } else {
     bin[k] = true;
     int left = subset(bin, arr, k + 1, n);
     bin[k] = false;
@@ -47,8 +36,7 @@ int subset(bool *bin, int *arr, int k, int n)
   }
 }
 
-int main()
-{
+int main() {
   int n = 4 * 2;
   int *arr = new int[n]{3, 5, 7, 11, 8, 8, 2, 9};
   bool *bin = new bool[n];
