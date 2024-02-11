@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int tar = 10203040;
+
 int sum(bool *bin, int *arr, int n) {
   int Sum = 0;
   for (int i = 0; i < n; i++) {
@@ -12,21 +14,20 @@ int sum(bool *bin, int *arr, int n) {
 }
 
 void backtrack(bool *bin, int *arr, int k, int n, int target) {
-  if (k == n) {
-    if (sum(bin, arr, k) == target) {
+  if (k <= n) {
+    int Sum = sum(bin, arr, k);
+    if (Sum < target) {
+      bin[k] = true;
+      backtrack(bin, arr, k + 1, n, target);
+      bin[k] = false;
+      backtrack(bin, arr, k + 1, n, target);
+    } else if (Sum == target) {
       for (int i = 0; i < n; i++) {
         if (bin[i]) {
           cout << arr[i] << " ";
         }
       }
       cout << endl;
-    }
-  } else {
-    if (sum(bin, arr, k) <= target) {
-      bin[k] = true;
-      backtrack(bin, arr, k + 1, n, target);
-      bin[k] = false;
-      backtrack(bin, arr, k + 1, n, target);
     }
   }
 }
