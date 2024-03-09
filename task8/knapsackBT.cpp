@@ -29,8 +29,8 @@ int sumvalue(bool *bin, Item **items, int n) {
 }
 
 int mostexpensive(bool *bin, Item **items, int limit, int k, int n) {
+  count++;
   if (k == n) {
-    count++;
     int sumw = sumweight(bin, items, n);
     if (sumw <= limit) {
       int sumv = sumvalue(bin, items, n);
@@ -64,10 +64,10 @@ int mostexpensive(bool *bin, Item **items, int limit, int k, int n) {
 int main() {
   int n = 4;
   Item *items[n];
-  items[0] = new Item(12, 8);
-  items[1] = new Item(20, 7);
+  items[0] = new Item(2, 2);
+  items[1] = new Item(5, 7);
   items[2] = new Item(4, 4);
-  items[3] = new Item(2, 2);
+  items[3] = new Item(12, 8);
 
   int targetweight = 18;
   bool *bin = new bool[n]{false};
