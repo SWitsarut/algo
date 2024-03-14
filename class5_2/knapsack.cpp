@@ -58,12 +58,12 @@ int mostexpensive(bool *bin, Item **items, int limit, int k, int n) {
 int main() {
   int n = 4;
   Item *items[n];
-  items[0] = new Item(12, 8);
-  items[1] = new Item(5, 7);
-  items[2] = new Item(4, 4);
-  items[3] = new Item(2, 2);
+  items[0] = new Item(1, 1);
+  items[1] = new Item(4, 3);
+  items[2] = new Item(5, 4);
+  items[3] = new Item(7, 5);
 
-  int targetweight = 18;
+  int targetweight = 7;
   bool *bin = new bool[n]{false};
   int maxval = mostexpensive(bin, items, targetweight, 0, n);
   cout << "Maximum value within the weight limit: " << maxval << endl;
