@@ -8,7 +8,7 @@ float avg(float* arr, int n) {
   } else {
     float now = (avg(arr, n - 1) * (n - 1) + arr[n - 1]) / n;
     cout << now << endl;
-    return now;
+    return n
   }
 }
 int main() {
